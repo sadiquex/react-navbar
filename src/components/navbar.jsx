@@ -3,16 +3,16 @@ import "../navbar.css";
 
 export default function Navbar() {
   const [active, setActive] = useState("nav__menu");
-  // const [toggleIcon, setToggleIcon] = useState('nav_toggler')
-  
+  const [toggleIcon, setToggleIcon] = useState("nav_toggler");
+
   const navToggler = () => {
     active === "nav__menu"
       ? setActive("nav__menu nav__active")
       : setActive("nav__menu");
 
-      // // toggleicon
-      // toggleIcon === 'nav__toggler' ? setToggleIcon('nav__toggler toggle'):
-      // setToggleIcon('nav__toggler')
+    // // toggleicon
+    // toggleIcon === 'nav__toggler' ? setToggleIcon('nav__toggler toggle'):
+    // setToggleIcon('nav__toggler')
   };
 
   return (
@@ -47,10 +47,8 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
-      <div className="nav_toggler" onClick={navToggler}>
-        <div className="line1 1"></div>
-        <div className="line2 2"></div>
-        <div className="line3 3"></div>
+      <div className="nav__toggler" onClick={navToggler}>
+        <i className="fa-solid fa-bars toggleIcon"></i>
       </div>
     </nav>
   );
