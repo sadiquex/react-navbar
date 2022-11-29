@@ -1,12 +1,8 @@
-import React from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./Navbar";
+import { createElement as $ } from "react";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+  return $("div", { className: "App" }, $(Navbar));
 }
 
 export default App;
